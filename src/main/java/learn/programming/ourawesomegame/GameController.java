@@ -13,6 +13,7 @@ public class GameController {
     @FXML private AnchorPane game_controls;
 
     @FXML private Label welcomeText;
+    @FXML private Label anotherWelcomeText;
 
     @FXML
     protected void onHelloButtonClick() {

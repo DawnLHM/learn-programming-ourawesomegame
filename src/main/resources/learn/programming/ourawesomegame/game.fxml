@@ -21,6 +21,8 @@
                 AnchorPane.bottomAnchor="100" AnchorPane.leftAnchor="50"/>
         <Label fx:id="welcomeText"
                AnchorPane.bottomAnchor="50" AnchorPane.leftAnchor="50"/>
+        <Label fx:id="anotherWelcomeText"
+               AnchorPane.bottomAnchor="30" AnchorPane.leftAnchor="50"/>
     </AnchorPane>
 
 </StackPane>
