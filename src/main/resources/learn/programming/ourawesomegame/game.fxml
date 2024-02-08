@@ -14,22 +14,30 @@
         <Canvas fx:id="game_canvas">
 
         </Canvas>
+        <Button AnchorPane.bottomAnchor="600" AnchorPane.leftAnchor="50"
+                fx:id="runningButton1"
+                text="We"
+        />
+        <Button AnchorPane.bottomAnchor="600" AnchorPane.leftAnchor="150"
+                fx:id="runningButton2"
+                text="Will"
+        />
+        <Button AnchorPane.bottomAnchor="600" AnchorPane.leftAnchor="250"
+                fx:id="runningButton3"
+                text="Run"
+        />
+        <Button AnchorPane.bottomAnchor="600" AnchorPane.leftAnchor="350"
+                fx:id="runningButton4"
+                text="Away!"
+        />
     </AnchorPane>
 
     <AnchorPane fx:id="game_controls">
-        <Button text="Hello!" onAction="#onHelloButtonClick"
+        <Button text="Start!" onAction="#startTheButtonsGoing"
                 AnchorPane.bottomAnchor="100" AnchorPane.leftAnchor="50"/>
         <Label fx:id="welcomeText"
                AnchorPane.bottomAnchor="50" AnchorPane.leftAnchor="50"/>
     </AnchorPane>
 
-    <Button layoutX="30" layoutY="30"
-            fx:id="runningButton"
-            text="I Will Run Away From the Mouse!!!"
-            onAction="#onHelloButtonClick"
-            onMouseEntered="#runAwayFromTheMouse"
-    />
-    <Button layoutX="130" layoutY="130" styleClass="iamaclass" text="Bring that other button back!" onAction="#onHelloButtonClick2"/>
 
 </StackPane>
-

@@ -1,5 +1,6 @@
 package learn.programming.ourawesomegame;
 
+import javafx.animation.Interpolator;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
@@ -22,25 +23,51 @@ public class GameController {
     protected void onHelloButtonClick() {
         welcomeText.setText("Sleepy!");
     }
-    @FXML
-    private Button runningButton;
+    @FXML private Button runningButton1;
+    @FXML private Button runningButton2;
+    @FXML private Button runningButton3;
+    @FXML private Button runningButton4;
 
     @FXML
-    protected void onHelloButtonClick2() {
-        runningButton.setLayoutX(30);
-        runningButton.setLayoutY(30);
-        boolean keepGoing=false;
+    protected void startTheButtonsGoing() {
+        System.out.println("I did something");
+        float changeX = 200 + (float) (Math.random() * 500);
+        float changeY = 200 + (float) (Math.random() * 500);
 
+        TranslateTransition tt1 = getTransition(runningButton1, changeX, changeY, Interpolator.LINEAR);
+        TranslateTransition tt2 = getTransition(runningButton2, changeX, changeY, Interpolator.EASE_BOTH);
+        TranslateTransition tt3 = getTransition(runningButton3, changeX, changeY, Interpolator.LINEAR);
+        TranslateTransition tt4 = getTransition(runningButton4, changeX, changeY, Interpolator.EASE_BOTH);
+
+        //Playing the animations
+        tt1.play();
+        tt2.play();
+        tt3.play();
+        tt4.play();
+    }
+
+    private TranslateTransition getTransition(final Button button,
+                                              final float changeX,
+                                              final float changeY,
+                                              final Interpolator interpolator
+    ) {
+        TranslateTransition tt = new TranslateTransition(Duration.millis(500), button);
+        tt.setRate(1);
+        tt.setInterpolator(interpolator);
+        tt.toXProperty().set(changeX);
+        tt.toYProperty().set(changeY);
+        tt.setCycleCount(1);
+        return tt;
     }
 
     @FXML
     protected void runAwayFromTheMouse() {
-        runningButton.setStyle("-fx-background-color: green;");
         float changeX = (float) (Math.random() * 300);
         float changeY = (float) (Math.random() * 300);
 
-        TranslateTransition tt = new TranslateTransition(Duration.millis(500), runningButton);
+        TranslateTransition tt = new TranslateTransition(Duration.millis(500), runningButton1);
         tt.setRate(1);
+        tt.setInterpolator(Interpolator.EASE_IN);
         tt.toXProperty().set(changeX);
         tt.toYProperty().set(changeY);
         tt.setCycleCount(1);
