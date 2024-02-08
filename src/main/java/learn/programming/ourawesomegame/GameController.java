@@ -3,10 +3,15 @@ package learn.programming.ourawesomegame;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
+<<<<<<< HEAD
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
+=======
+import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
+>>>>>>> main
 
 public class GameController {
 
@@ -16,6 +21,10 @@ public class GameController {
     @FXML private AnchorPane game_controls;
 
     @FXML private Label welcomeText;
+<<<<<<< HEAD
+=======
+    @FXML private Label anotherWelcomeText;
+>>>>>>> main
 
     @FXML
     protected void onHelloButtonClick() {
